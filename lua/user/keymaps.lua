@@ -13,25 +13,24 @@ local map = function(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
--- change leader to comma
 vim.g.mapleader = ','
 
 map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
--- 
--- -- Visual Block --
--- -- Move text up and down
--- map('x', 'J', ':move '>+1<CR>gv-gv')
--- map('x', 'K', ':move '<-2<CR>gv-gv')
--- map('x', '<A-j>', ':move '>+1<CR>gv-gv')
--- map('x', '<A-k>', ':move '<-2<CR>gv-gv')
--- 
--- -- Move text up and down
--- map('n', '<A-j>', '<Esc>:m .+1<CR>==gi')
--- map('n', '<A-k>', '<Esc>:m .-2<CR>==gi')
--- map('v', 'p', ''_dP')
+
+-- Visual Block --
+-- Move text up and down
+map('x', 'J', ":move '>+1<CR>gv-gv")
+map('x', 'K', ":move '<-2<CR>gv-gv")
+map('x', '<A-j>', ":move '>+1<CR>gv-gv")
+map('x', '<A-k>', ":move '<-2<CR>gv-gv")
+
+-- Move text up and down
+map('n', '<A-j>', '<Esc>:m .+1<CR>==gi')
+map('n', '<A-k>', '<Esc>:m .-2<CR>==gi')
+map('v', 'p', "'_dP")
 
 map('n', '<C-\\>', '<cmd>vsplit<cr>')
 
@@ -48,3 +47,11 @@ map('n', '<C-b>', '<cmd>Telescope buffers<cr>')
 -- nvim-tree
 map('n', '<C-n>', '<cmd>NvimTreeToggle<cr>')
 map('n', '<A-g>', '<cmd>LazyGit<cr>')
+
+-- trouble
+map('n', '<A-/>', '<cmd>TroubleToggle<cr>')
+map('n', '<leader>xw', '<cmd>Trouble workspace_diagnostics<cr>')
+map('n', '<leader>xd', '<cmd>Trouble document_diagnostics<cr>')
+map('n', '<leader>xl', '<cmd>Trouble loclist<cr>')
+map('n', '<leader>qf', '<cmd>Trouble quickfix<cr>')
+map('n', 'gR', ':Trouble lsp_references<cr>')
