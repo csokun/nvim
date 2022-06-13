@@ -86,12 +86,7 @@ return require('packer').startup(function(use)
   use {
     'akinsho/bufferline.nvim',
     tag = "v2.*",
-    requires = 'kyazdani42/nvim-web-devicons',
-    config = function ()
-      require('bufferline').setup {
-        offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
-      }
-    end
+    requires = 'kyazdani42/nvim-web-devicons'
   }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
