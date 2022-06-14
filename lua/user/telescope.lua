@@ -18,6 +18,8 @@ telescope.setup {
 
     mappings = {
       i = {
+        ["<esc>"] = actions.close,
+
         ["<C-n>"] = actions.cycle_history_next,
         ["<C-p>"] = actions.cycle_history_prev,
 
@@ -29,7 +31,7 @@ telescope.setup {
       },
       n = {
         ["<C-t>"] = trouble.open_with_trouble,
-      }
-    }
-  }
+      },
+    },
+  },
 }

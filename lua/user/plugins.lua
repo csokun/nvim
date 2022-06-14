@@ -1,15 +1,15 @@
 -- bootstrap
 local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({
-    'git',
-    'clone',
-    '--depth',
-    '1',
-    'https://github.com/wbthomason/packer.nvim',
-    install_path
-  })
+  packer_bootstrap = fn.system {
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "https://github.com/wbthomason/packer.nvim",
+    install_path,
+  }
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
@@ -35,7 +35,7 @@ packer.init {
   },
 }
 
-return require('packer').startup(function(use)
+return require("packer").startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
   use "kdheepak/lazygit.nvim"
 
   -- LSP
-  use "neovim/nvim-lspconfig"           -- enable LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim"
 
@@ -58,39 +58,54 @@ return require('packer').startup(function(use)
   }
 
   -- nvim-cmp
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
+  use "hrsh7th/cmp-nvim-lsp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-cmdline"
+  use "hrsh7th/nvim-cmp"
 
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'onsails/lspkind-nvim'
+  use "L3MON4D3/LuaSnip"
+  use "saadparwaiz1/cmp_luasnip"
+  use "onsails/lspkind-nvim"
 
   -- telescope
   use "nvim-telescope/telescope.nvim"
   use {
     "folke/trouble.nvim",
-    config = function() require("trouble").setup {} end
+    config = function()
+      require("trouble").setup {}
+    end,
+  }
+  -- editing enhancement
+  use {
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup {}
+    end,
+  }
+  use {
+    "filipdutescu/renamer.nvim",
+    config = function()
+      require("renamer").setup {}
+    end,
   }
 
   -- theme
   use {
-    'navarasu/onedark.nvim',
+    "navarasu/onedark.nvim",
     config = function()
-      require('onedark').setup { style = 'darker' }
-      require('onedark').load()
-    end
+      require("onedark").setup { style = "darker" }
+      require("onedark").load()
+    end,
   }
-  use { 'nvim-lualine/lualine.nvim' }
+  use { "nvim-lualine/lualine.nvim" }
   use {
-    'akinsho/bufferline.nvim',
+    "akinsho/bufferline.nvim",
     tag = "v2.*",
   }
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
-    require('packer').sync()
+    require("packer").sync()
   end
 end)
