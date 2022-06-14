@@ -11,5 +11,14 @@ fc-cache -f -v
 
 ## Dependencies
 
-- `cargo install stylua`
+```bash
+# install stylua
+cargo install stylua
+
+# install bash-language-server
+npm i -g bash-language-server
+
+# setup GitHub Copilot
+:Copilot setup
+```
 

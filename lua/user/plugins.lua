@@ -90,6 +90,9 @@ return require("packer").startup(function(use)
     end,
   }
 
+  -- AI
+  use "github/copilot.vim"
+
   -- theme
   use {
     "navarasu/onedark.nvim",

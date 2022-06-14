@@ -7,6 +7,7 @@ lsp_installer.setup {
   ensure_installed = {
     "tsserver",
     "sumneko_lua",
-    "elixirls"
+    "elixirls",
+    "bashls"
   },
 }
