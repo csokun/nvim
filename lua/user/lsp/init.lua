@@ -73,6 +73,9 @@ lspconfig.elixirls.setup {
   }
 }
 
+-- CLI -> LSP Wrapper
+require "user.lsp.null-ls"
+
 -- auto format on save
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*",
