@@ -12,9 +12,13 @@ local actions = require "telescope.actions"
 
 telescope.setup {
   defaults = {
-
     selection_caret = " ",
     path_display = { "smart" },
+
+    file_ignore_patterns = {
+      ".git",
+      "node_modules"
+    },
 
     mappings = {
       i = {
@@ -34,4 +38,25 @@ telescope.setup {
       },
     },
   },
+  
+  pickers = {
+    lsp_code_actions = {
+      theme = "cursor"
+    },
+    code_action = {
+      theme = "cursor"
+    },
+    lsp_workspace_diagnostics = {
+      theme = "dropdown"
+    }
+  },
+
+  extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {}
+    }
+  }
 }
+
+-- load extensions
+telescope.load_extension("ui-select")

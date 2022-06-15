@@ -29,7 +29,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 local servers = {
   "tsserver",
   "bashls",
-  "eslint",
+  --"eslint",
   "gopls"
 }
 
