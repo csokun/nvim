@@ -15,7 +15,9 @@ local servers = {
   "sumneko_lua",
   "elixirls",
   "bashls",
-  "gopls"
+  "gopls",
+  "clangd",
+  "solc"
 }
 -- auto install LSP
 lsp_installer.setup {

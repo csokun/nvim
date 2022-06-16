@@ -18,6 +18,7 @@ configs.setup {
     "toml",
     "yaml",
     "tsx",
+    "solidity",
     "python",
     "typescript",
     "javascript"
