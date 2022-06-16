@@ -1,14 +1,14 @@
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
-	return
+  return
 end
 
 configs.setup {
   -- A list of parser names, or "all"
-  ensure_installed = { 
-    "elixir", 
+  ensure_installed = {
+    "elixir",
     "erlang",
-    "lua", 
+    "lua",
     "go",
     "heex",
     "eex",
