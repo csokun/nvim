@@ -5,11 +5,11 @@ end
 
 -- local formatting = null_ls.builtins.formatting
 -- local diagnostics = null_ls.diagnostics
--- local code_actions = null_ls.builtins.code_actions
+local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup {
   sources = {
     --formatting.stylua,
-    --code_actions.eslint,
+    code_actions.eslint,
   },
 }

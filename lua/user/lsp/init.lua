@@ -1,3 +1,4 @@
+require "user.lsp.diagnostic"
 require "user.lsp.lsp-installer"
 -- require "user.lsp.null-ls"
 
