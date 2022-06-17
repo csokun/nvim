@@ -31,5 +31,6 @@ pip install --upgrade pyright autopep8
 ## Debugger
 
 ```bash
+# golang
 go install github.com/go-delve/delve/cmd/dlv@latest
 ```

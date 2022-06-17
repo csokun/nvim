@@ -6,8 +6,8 @@ end
 fterm.setup {
   border     = 'double',
   dimensions = {
-    height = 0.4,
-    width = 0.6,
+    height = 0.6,
+    width = 0.8,
   },
 }
 

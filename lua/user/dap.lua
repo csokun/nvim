@@ -39,3 +39,26 @@ end
 dap.listeners.before.event_exited["dapui_config"] = function()
   dap_ui.close()
 end
+
+-- elixir
+dap.adapters.mix_task = {
+  type = 'executable',
+  command = vim.fn.stdpath "data" .. "/lsp_servers/elixirls/elixir-ls/debugger.sh",
+  args = {}
+}
+
+dap.configurations.elixir = {
+  {
+    type = "mix_task",
+    name = "mix test",
+    task = 'test',
+    taskArgs = { "--trace" },
+    request = "launch",
+    startApps = true, -- for Phoenix projects
+    projectDir = "${workspaceFolder}",
+    requireFiles = {
+      "test/**/test_helper.exs",
+      "test/**/*_test.exs"
+    }
+  },
+}
