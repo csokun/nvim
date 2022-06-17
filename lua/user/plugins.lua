@@ -103,6 +103,7 @@ return require("packer").startup(function(use)
       require("renamer").setup {}
     end,
   }
+  use "numToStr/FTerm.nvim"
 
   -- AI
   use "github/copilot.vim"
