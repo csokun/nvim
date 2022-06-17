@@ -28,3 +28,8 @@ sudo pacman -S clang
 pip install --upgrade pyright autopep8
 ```
 
+## Debugger
+
+```bash
+go install github.com/go-delve/delve/cmd/dlv@latest
+```

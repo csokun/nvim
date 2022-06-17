@@ -78,6 +78,18 @@ return require("packer").startup(function(use)
       require("trouble").setup {}
     end,
   }
+  -- DAP
+  use "mfussenegger/nvim-dap"
+  use "theHamsta/nvim-dap-virtual-text"
+  use "rcarriga/nvim-dap-ui"
+  use "nvim-telescope/telescope-dap.nvim"
+  use {
+    "leoluz/nvim-dap-go",
+    config = function()
+      require('dap-go').setup()
+    end
+  }
+
   -- editing enhancement
   use {
     "windwp/nvim-autopairs",
