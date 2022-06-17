@@ -1,6 +1,5 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
-if not cmp_status_ok then
-  return
+if not cmp_status_ok then return
 end
 
 local snip_status_ok, luasnip = pcall(require, "luasnip")
@@ -54,16 +53,16 @@ cmp.setup {
     format = require("lspkind").cmp_format({
       with_text = true,
       menu = {
+        nvim_lsp = "[LSP]",
         copilot = "[Copilot]",
         luasnip = "[LuaSnip]",
-        nvim_lsp = "[LSP]",
       }
     })
   },
   sources = {
+    { name = 'nvim_lsp' },
     { name = 'luasnip' },
     { name = 'copilot' },
-    { name = 'nvim_lsp' },
     { name = 'path' },
     { name = 'buffer', max_item_count = 3, keyword_length = 4 }
   }

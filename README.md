@@ -9,7 +9,7 @@ unzip FiraCode.zip -d ~/.fonts/FiraCode/
 fc-cache -f -v
 ```
 
-## Dependencies
+## Languages Server
 
 ```bash
 # install stylua
@@ -20,5 +20,11 @@ npm i -g bash-language-server
 
 # setup GitHub Copilot
 :Copilot setup
+
+# C/C++
+sudo pacman -S clang
+
+# Python
+pip install --upgrade pyright autopep8
 ```
 

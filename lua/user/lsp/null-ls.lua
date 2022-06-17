@@ -11,6 +11,10 @@ null_ls.setup {
   sources = {
     diagnostics.eslint,
     code_actions.eslint,
-    formatting.prettier
+    formatting.autopep8,
+    formatting.prettier.with {
+      extra_filetypes = { "toml", "solidity" },
+      extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
+    }
   },
 }

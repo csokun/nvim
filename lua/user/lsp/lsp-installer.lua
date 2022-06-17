@@ -15,6 +15,7 @@ local servers = {
   "sumneko_lua",
   "elixirls",
   "bashls",
+  "pyright",
   "gopls",
   "clangd",
   "solc"
