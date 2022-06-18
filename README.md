@@ -33,4 +33,6 @@ pip install --upgrade pyright autopep8
 ```bash
 # golang
 go install github.com/go-delve/delve/cmd/dlv@latest
+
+# Elixir ref. https://github.com/elixir-lsp/elixir-ls#debugger-support
 ```

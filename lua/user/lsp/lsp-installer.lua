@@ -43,7 +43,7 @@ for _, lsp in ipairs(servers) do
       if (client.name == "tsserver") then
         client.resolved_capabilities.document_formatting = false
         client.resolved_capabilities.document_range_formatting = false
-        client.resolved_capabilities.publish_diagnostics = false
+        --client.resolved_capabilities.publish_diagnostics = false
       end
 
       on_attach(client, bufnr)
@@ -60,3 +60,4 @@ for _, lsp in ipairs(servers) do
 
   lspconfig[lsp].setup(options)
 end
+lspconfig.eslint.setup { capabilities = capabilities }
