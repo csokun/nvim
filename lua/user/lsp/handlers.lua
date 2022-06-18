@@ -16,7 +16,7 @@ M.on_attach = function(client, bufnr)
   nmap { 'gd', vim.lsp.buf.definition, bufopts }
   nmap { 'K', vim.lsp.buf.hover, bufopts }
   nmap { 'gi', vim.lsp.buf.implementation, bufopts }
-  nmap { '<C-k>', vim.lsp.buf.signature_help, bufopts }
+  --nmap { '<C-k>', vim.lsp.buf.signature_help, bufopts }
   nmap { '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts }
   nmap { '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts }
   nmap {

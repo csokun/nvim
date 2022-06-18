@@ -29,7 +29,7 @@ map("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
 -- Move text up and down
 map("n", "<A-j>", "<Esc>:m .+1<CR>==gi")
-map("n", "<A-k>", "<Esc>:m .-2<CR>==gi")
+map("n", "<A-k>", "<Esc>:m .-1<CR>==gi")
 map("v", "p", "'_dP")
 
 map("n", "<C-\\>", "<cmd>vsplit<cr>")
