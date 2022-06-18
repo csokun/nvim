@@ -29,7 +29,7 @@ M.on_attach = function(client, bufnr)
   nmap { '<space>D', vim.lsp.buf.type_definition, bufopts }
   nmap { '<space>rn', vim.lsp.buf.rename, bufopts }
   nmap { '<space>ca', vim.lsp.buf.code_action, bufopts }
-  nmap { 'gr', vim.lsp.buf.references, bufopts }
+  --nmap { 'gr', vim.lsp.buf.references, bufopts }
   nmap { '<space>f', vim.lsp.buf.formatting, bufopts }
 end
 
