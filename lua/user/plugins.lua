@@ -1,6 +1,7 @@
 -- bootstrap
 local fn = vim.fn
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
+local packer_bootstrap = nil
 if fn.empty(fn.glob(install_path)) > 0 then
   packer_bootstrap = fn.system {
     "git",
@@ -104,6 +105,7 @@ return require("packer").startup(function(use)
     end,
   }
   use "numToStr/FTerm.nvim"
+  use { "numToStr/Comment.nvim", config = function() require("Comment").setup() end }
 
   -- AI
   use "github/copilot.vim"

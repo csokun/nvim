@@ -43,7 +43,6 @@ map("n", "<C-\\>", "<cmd>vsplit<cr>")
 map("n", "<C-p>", "<cmd>Telescope find_files<cr>")
 map("n", "<C-f>", "<cmd>Telescope live_grep<cr>")
 map("n", "<C-b>", "<cmd>Telescope buffers<cr>")
-map("n", "?", "<cmd>Telescope keymaps<cr>")
 
 -- nvim-tree
 map("n", "<C-n>", "<cmd>NvimTreeToggle<cr>")
