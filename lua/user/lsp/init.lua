@@ -1,6 +1,7 @@
 require "user.lsp.diagnostic"
 require "user.lsp.lsp-installer"
 require "user.lsp.null-ls"
+require "user.lsp.lsp_signature"
 
 -- auto format on save
 vim.api.nvim_create_autocmd("BufWritePre", {

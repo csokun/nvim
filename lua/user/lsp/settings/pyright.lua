@@ -4,7 +4,7 @@ return {
       analysis = {
         typeCheckingMode = "off",
         --autoSearchPaths = true,
-        --diagnosticMode = "workspace",
+        diagnosticMode = "workspace",
         --useLibraryCodeForTypes = true
       }
     }

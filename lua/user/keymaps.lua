@@ -51,12 +51,12 @@ map("n", "<C-n>", "<cmd>NvimTreeToggle<cr>")
 map("n", "<A-g>", "<cmd>LazyGit<cr>")
 
 -- trouble
-map("n", "<A-/>", "<cmd>TroubleToggle<cr>")
-map("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>")
-map("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>")
-map("n", "<leader>xl", "<cmd>Trouble loclist<cr>")
-map("n", "<leader>qf", "<cmd>Trouble quickfix<cr>")
-map("n", "gR", ":Trouble lsp_references<cr>")
+-- map("n", "<A-/>", "<cmd>TroubleToggle<cr>")
+-- map("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>")
+-- map("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>")
+-- map("n", "<leader>xl", "<cmd>Trouble loclist<cr>")
+-- map("n", "<leader>qf", "<cmd>Trouble quickfix<cr>")
+-- map("n", "gR", ":Trouble lsp_references<cr>")
 
 map("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>')
 map("n", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>')
