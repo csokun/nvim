@@ -52,7 +52,7 @@ return require("packer").startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim"
   use "ray-x/lsp_signature.nvim"
-
+  use "b0o/schemastore.nvim"
   -- Treesitter
   use {
     "nvim-treesitter/nvim-treesitter",

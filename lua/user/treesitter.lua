@@ -33,5 +33,8 @@ configs.setup {
   },
 
   -- indentation based on treesitter for the = operator
-  indent = { enable = true },
+  indent = {
+    enable = true,
+    disable = { "yaml" }
+  },
 }

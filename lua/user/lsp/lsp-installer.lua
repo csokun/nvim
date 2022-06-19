@@ -18,7 +18,9 @@ local servers = {
   "pyright",
   "gopls",
   "clangd",
-  "solc"
+  "solc",
+  "jsonls",
+  "yamlls"
 }
 -- auto install LSP
 lsp_installer.setup {
