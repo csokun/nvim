@@ -46,6 +46,7 @@ return require("packer").startup(function(use)
 
   -- git
   use "kdheepak/lazygit.nvim"
+  use { "lewis6991/gitsigns.nvim", config = function() require("gitsigns").setup() end }
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
@@ -54,10 +55,7 @@ return require("packer").startup(function(use)
   use "ray-x/lsp_signature.nvim"
   use "b0o/schemastore.nvim"
   -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
-  }
+  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
   -- nvim-cmp
   use "hrsh7th/cmp-nvim-lsp"
@@ -74,38 +72,19 @@ return require("packer").startup(function(use)
   use "nvim-telescope/telescope.nvim"
   use "nvim-telescope/telescope-ui-select.nvim"
 
-  use {
-    "folke/trouble.nvim",
-    config = function()
-      require("trouble").setup {}
-    end,
-  }
+  use { "folke/trouble.nvim", config = function() require("trouble").setup() end }
+
   -- DAP
   use "mfussenegger/nvim-dap"
   use "theHamsta/nvim-dap-virtual-text"
   use "rcarriga/nvim-dap-ui"
   use "nvim-telescope/telescope-dap.nvim"
-  use {
-    "leoluz/nvim-dap-go",
-    config = function()
-      require('dap-go').setup()
-    end
-  }
+  use { "leoluz/nvim-dap-go", config = function() require('dap-go').setup() end }
 
   -- editing enhancement
-  use {
-    "windwp/nvim-autopairs",
-    config = function()
-      require("nvim-autopairs").setup {}
-    end,
-  }
-  use {
-    "filipdutescu/renamer.nvim",
-    config = function()
-      require("renamer").setup {}
-    end,
-  }
   use "numToStr/FTerm.nvim"
+  use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup() end }
+  use { "filipdutescu/renamer.nvim", config = function() require("renamer").setup() end }
   use { "numToStr/Comment.nvim", config = function() require("Comment").setup() end }
   use { 'phaazon/hop.nvim', branch = 'v1' }
 
