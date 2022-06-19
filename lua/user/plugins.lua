@@ -113,18 +113,11 @@ return require("packer").startup(function(use)
   use "github/copilot.vim"
 
   -- theme
-  use {
-    "navarasu/onedark.nvim",
-    config = function()
-      require("onedark").setup { style = "darker" }
-      require("onedark").load()
-    end,
-  }
-  use { "nvim-lualine/lualine.nvim" }
-  use {
-    "akinsho/bufferline.nvim",
-    tag = "v2.*",
-  }
+  use "navarasu/onedark.nvim"
+  use "nvim-lualine/lualine.nvim"
+  use { "akinsho/bufferline.nvim", tag = "v2.*" }
+  use "lukas-reineke/indent-blankline.nvim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
