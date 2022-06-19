@@ -107,7 +107,10 @@ return require("packer").startup(function(use)
   }
   use "numToStr/FTerm.nvim"
   use { "numToStr/Comment.nvim", config = function() require("Comment").setup() end }
-
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v1', -- optional but strongly recommended
+  }
   -- AI
   use "github/copilot.vim"
 

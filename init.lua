@@ -9,3 +9,4 @@ require "user.cmp"
 require "user.lsp"
 require "user.dap"
 require "user.fterm"
+require "user.hop" -- easymotion alternative
