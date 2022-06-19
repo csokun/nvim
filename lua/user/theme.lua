@@ -12,3 +12,11 @@ if indent_blankline_ok then
     show_current_context = true,
   }
 end
+
+-- lualine
+local lualine_ok, lualine = pcall(require, "lualine")
+if lualine_ok then
+  lualine.setup({
+    theme = "onedark"
+  })
+end
