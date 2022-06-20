@@ -83,7 +83,7 @@ return require("packer").startup(function(use)
 
   -- editing enhancement
   use "numToStr/FTerm.nvim"
-  use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup() end }
+  use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup() end, after = 'nvim-cmp' }
   use { "filipdutescu/renamer.nvim", config = function() require("renamer").setup() end }
   use { "numToStr/Comment.nvim", config = function() require("Comment").setup() end }
   use { 'phaazon/hop.nvim', branch = 'v1' }
@@ -96,6 +96,7 @@ return require("packer").startup(function(use)
   use "nvim-lualine/lualine.nvim"
   use { "akinsho/bufferline.nvim", tag = "v2.*" }
   use "lukas-reineke/indent-blankline.nvim"
+  use { "j-hui/fidget.nvim", after = "lualine.nvim", config = function() require("fidget").setup() end }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
