@@ -82,11 +82,12 @@ return require("packer").startup(function(use)
   use { "leoluz/nvim-dap-go", config = function() require('dap-go').setup() end }
 
   -- editing enhancement
-  use "numToStr/FTerm.nvim"
+  use { "numToStr/FTerm.nvim", event = "CursorHold" }
   use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup() end, after = 'nvim-cmp' }
   use { "filipdutescu/renamer.nvim", config = function() require("renamer").setup() end }
   use { "numToStr/Comment.nvim", config = function() require("Comment").setup() end }
   use { 'phaazon/hop.nvim', branch = 'v1' }
+  use "towolf/vim-helm"
 
   -- AI
   use "github/copilot.vim"
