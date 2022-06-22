@@ -45,7 +45,7 @@ cmp.setup {
       with_text = true,
       menu = {
         nvim_lsp = "[LSP]",
-        copilot = "[Copilot]",
+        -- copilot = "[Copilot]",
         luasnip = "[LuaSnip]",
       }
     })
@@ -53,7 +53,7 @@ cmp.setup {
   sources = {
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
-    { name = 'copilot' },
+    --{ name = 'copilot' },
     { name = 'path' },
     { name = 'buffer', max_item_count = 3, keyword_length = 4 }
   }

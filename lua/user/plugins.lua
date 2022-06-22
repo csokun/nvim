@@ -90,7 +90,7 @@ return require("packer").startup(function(use)
   use "towolf/vim-helm"
 
   -- AI
-  use "github/copilot.vim"
+  -- use "github/copilot.vim"
 
   -- theme
   use "navarasu/onedark.nvim"
