@@ -58,3 +58,11 @@ cmp.setup {
     { name = 'buffer', max_item_count = 3, keyword_length = 4 }
   }
 }
+
+vim.api.nvim_create_autocmd({ "InsertLeave" }, {
+  callback = function()
+    if luasnip.expand_or_jumpable() then
+      luasnip.unlink_current()
+    end
+  end,
+})
