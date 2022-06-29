@@ -30,7 +30,7 @@ local config = {
   float = {
     focusable = false,
     style = "minimal",
-    border = "rounded",
+    --border = "rounded",
     source = "always",
     header = "",
     prefix = "",
@@ -41,5 +41,5 @@ vim.diagnostic.config(config)
 
 vim.api.nvim_create_autocmd({ "CursorHold", "CursorHoldI" }, {
   pattern = "*",
-  callback = function () vim.diagnostic.open_float() end
+  callback = function() vim.diagnostic.open_float() end
 })
