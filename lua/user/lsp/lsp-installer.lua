@@ -42,7 +42,7 @@ for _, lsp in ipairs(servers) do
   options = {
     on_attach = function(client, bufnr)
       -- disable formatting capabilities
-      if (client.name == "tsserver") then
+      if (client.name == "tsserver" or client.name == "jsonls") then
         client.resolved_capabilities.document_formatting = false
         client.resolved_capabilities.document_range_formatting = false
         --client.resolved_capabilities.publish_diagnostics = false
