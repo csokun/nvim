@@ -54,3 +54,8 @@ map("n", "<A-g>", "<cmd>LazyGit<cr>")
 map("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>')
 map("n", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>')
 map("v", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>')
+
+-- maximize
+map("n", "<F3>", '<cmd>:MaximizerToggle<CR>')
+map("v", '<F3>', '<cmd>:MaximizerToggle<CR>gv')
+map("i", '<F3>', '<C-o>:MaximizerToggle<CR>')

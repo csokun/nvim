@@ -21,4 +21,4 @@ close_buffer.setup {
 local nmap = require("user.utils").nmap
 local opts = { noremap = true, silent = true }
 
-nmap { "<C-w>", function() close_buffer.delete({ type = 'this' }) end, opts }
+nmap { "Q", function() close_buffer.delete({ type = 'this' }) end, opts }

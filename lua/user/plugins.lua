@@ -89,7 +89,7 @@ return require("packer").startup(function(use)
   use { 'phaazon/hop.nvim', branch = 'v1' }
   use "towolf/vim-helm"
   use 'kazhala/close-buffers.nvim'
-
+  use 'szw/vim-maximizer'
   -- AI
   -- use "github/copilot.vim"
 
