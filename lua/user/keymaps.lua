@@ -27,15 +27,10 @@ map("n", "<esc><esc>", "<cmd>nohlsearch<cr>") -- double ESC to disable search hi
 map("v", ">", ">gv")
 map("v", "<", "<gv")
 
--- Move text up and down
+-- -- Move text up and down
 map("x", "J", ":move '>+1<CR>gv-gv")
 map("x", "K", ":move '<-2<CR>gv-gv")
-map("x", "<A-j>", ":move '>+1<CR>gv-gv")
-map("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
--- Move text up and down
-map("n", "<A-j>", "<Esc>:m .+1<CR>==gi")
-map("n", "<A-k>", "<Esc>:m .-1<CR>==gi")
 map("v", "p", "'_dP")
 
 map("n", "<C-\\>", "<cmd>vsplit<cr>")
