@@ -21,6 +21,12 @@ map("n", "<C-k>", "<C-w>k")
 map("n", "<C-l>", "<C-w>l")
 
 -- Visual Block --
+map("n", "<esc><esc>", "<cmd>nohlsearch<cr>") -- double ESC to disable search highlight
+
+-- stay in indent mode
+map("v", ">", ">gv")
+map("v", "<", "<gv")
+
 -- Move text up and down
 map("x", "J", ":move '>+1<CR>gv-gv")
 map("x", "K", ":move '<-2<CR>gv-gv")
@@ -49,14 +55,6 @@ map("n", "<leader>s", "<cmd>Telescope lsp_document_symbols<cr>")
 -- nvim-tree
 map("n", "<C-n>", "<cmd>NvimTreeToggle<cr>")
 map("n", "<A-g>", "<cmd>LazyGit<cr>")
-
--- trouble
--- map("n", "<A-/>", "<cmd>TroubleToggle<cr>")
--- map("n", "<leader>xw", "<cmd>Trouble workspace_diagnostics<cr>")
--- map("n", "<leader>xd", "<cmd>Trouble document_diagnostics<cr>")
--- map("n", "<leader>xl", "<cmd>Trouble loclist<cr>")
--- map("n", "<leader>qf", "<cmd>Trouble quickfix<cr>")
--- map("n", "gR", ":Trouble lsp_references<cr>")
 
 map("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>')
 map("n", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>')
