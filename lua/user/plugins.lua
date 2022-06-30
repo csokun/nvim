@@ -88,6 +88,7 @@ return require("packer").startup(function(use)
   use { "numToStr/Comment.nvim", config = function() require("Comment").setup() end }
   use { 'phaazon/hop.nvim', branch = 'v1' }
   use "towolf/vim-helm"
+  use 'kazhala/close-buffers.nvim'
 
   -- AI
   -- use "github/copilot.vim"

@@ -11,3 +11,4 @@ require "user.lsp"
 require "user.dap"
 require "user.fterm"
 require "user.hop" -- easymotion alternative
+require "user.close-buffer"

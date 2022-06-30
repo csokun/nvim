@@ -38,13 +38,17 @@ telescope.setup {
       },
     },
   },
-  
+
   pickers = {
     lsp_code_actions = {
       theme = "cursor"
     },
     code_action = {
       theme = "cursor"
+    },
+    buffers = {
+      previewer = false,
+      theme = "dropdown"
     },
     lsp_workspace_diagnostics = {
       theme = "dropdown"

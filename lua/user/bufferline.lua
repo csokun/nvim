@@ -15,3 +15,10 @@ bufferline.setup {
     }
   }
 }
+
+-- keymapping
+local nmap = require("user.utils").nmap
+local opts = { noremap = true, silent = true }
+
+nmap { '[b', [[<CMD>:BufferLineCycleNext<CR>]], opts }
+nmap { 'b]', [[<CMD>:BufferLineCyclePrev<CR>]], opts }
