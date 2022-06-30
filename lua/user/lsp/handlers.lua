@@ -1,12 +1,18 @@
 local M = {}
-
+local illuminate_status_ok, illuminate = pcall(require, 'illuminate')
 local nmap = require("user.utils").nmap
 local opts = { noremap = true, silent = true }
-
+-- diagnostic
 nmap { '<space>e', vim.diagnostic.open_float, opts }
 nmap { '[d', vim.diagnostic.goto_prev, opts }
 nmap { ']d', vim.diagnostic.goto_next, opts }
 nmap { '<space>q', vim.diagnostic.setloclist, opts }
+
+if illuminate_status_ok then
+  vim.g.Illuminate_ftblacklist = { 'alpha', 'NvimTree' }
+  nmap { '<a-n>', function() illuminate.next_reference { wrap = true } end, { noremap = true } }
+  nmap { '<a-p>', function() illuminate.next_reference { reverse = true, wrap = true } end, { noremap = true } }
+end
 
 M.on_attach = function(client, bufnr)
   -- Mappings.
@@ -31,6 +37,10 @@ M.on_attach = function(client, bufnr)
   nmap { '<space>ca', vim.lsp.buf.code_action, bufopts }
   --nmap { 'gr', vim.lsp.buf.references, bufopts }
   nmap { '<space>f', vim.lsp.buf.formatting, bufopts }
+
+  if illuminate_status_ok then
+    illuminate.on_attach(client)
+  end
 end
 
 M.flags = {
