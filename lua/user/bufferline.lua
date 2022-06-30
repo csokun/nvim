@@ -22,3 +22,4 @@ local opts = { noremap = true, silent = true }
 
 nmap { '[b', [[<CMD>:BufferLineCycleNext<CR>]], opts }
 nmap { 'b]', [[<CMD>:BufferLineCyclePrev<CR>]], opts }
+nmap { '<TAB>', [[<CMD>:BufferLinePick<CR>]], opts }
