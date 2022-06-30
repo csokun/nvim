@@ -88,8 +88,8 @@ return require("packer").startup(function(use)
   use { "numToStr/Comment.nvim", config = function() require("Comment").setup() end }
   use { 'phaazon/hop.nvim', branch = 'v1' }
   use "towolf/vim-helm"
-  use 'kazhala/close-buffers.nvim'
-  use 'szw/vim-maximizer'
+  use "kazhala/close-buffers.nvim"
+  use "szw/vim-maximizer"
   -- AI
   -- use "github/copilot.vim"
 
@@ -100,6 +100,7 @@ return require("packer").startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use { "j-hui/fidget.nvim", after = "lualine.nvim", config = function() require("fidget").setup() end }
   use "RRethy/vim-illuminate"
+  use { "akinsho/toggleterm.nvim", tag = "v2.*" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
