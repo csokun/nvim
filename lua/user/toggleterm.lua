@@ -11,6 +11,6 @@ end
 
 -- https://github.com/akinsho/toggleterm.nvim
 toggleterm.setup {
-  open_mapping = [[tt]],
+  open_mapping = [[<c-t>]],
   shell = prefer_shell()
 }
