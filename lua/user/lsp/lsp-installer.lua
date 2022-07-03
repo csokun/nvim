@@ -20,7 +20,8 @@ local servers = {
   "clangd",
   "solc",
   "jsonls",
-  "yamlls"
+  "yamlls",
+  "dockerls"
 }
 -- auto install LSP
 lsp_installer.setup {
