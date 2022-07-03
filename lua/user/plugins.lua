@@ -90,6 +90,14 @@ return require("packer").startup(function(use)
   use "towolf/vim-helm"
   use "kazhala/close-buffers.nvim"
   use "szw/vim-maximizer"
+  use {
+    "chentoast/marks.nvim",
+    event = "BufReadPre",
+    config = function()
+      require("marks").setup {}
+    end,
+  }
+
   -- AI
   -- use "github/copilot.vim"
 
