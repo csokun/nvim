@@ -61,4 +61,4 @@ for _, lsp in ipairs(servers) do
 
   lspconfig[lsp].setup(options)
 end
-lspconfig.eslint.setup { capabilities = capabilities }
+--lspconfig.eslint.setup { capabilities = capabilities }

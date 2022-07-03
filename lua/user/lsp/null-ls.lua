@@ -4,15 +4,15 @@ if not status_ok then
 end
 -- ref. https://www.reddit.com/r/neovim/comments/qckrnp/share_your_prettier_and_eslint_formatting_setup/
 local formatting = null_ls.builtins.formatting
---local diagnostics = null_ls.builtins.diagnostics
--- local code_actions = null_ls.builtins.code_actions
+local diagnostics = null_ls.builtins.diagnostics
+local code_actions = null_ls.builtins.code_actions
 
 -- local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup {
   sources = {
-    --diagnostics.eslint,
-    -- code_actions.eslint,
+    diagnostics.eslint,
+    code_actions.eslint,
     formatting.prettier.with {
       extra_filetypes = { "toml", "solidity" },
     }
