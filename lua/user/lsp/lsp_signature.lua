@@ -6,6 +6,7 @@ local config = {
   bind = true, -- This is mandatory, otherwise border config won't get registered.
   auto_close_after = nil, -- autoclose signature float win after x sec, disabled if nil.
   extra_trigger_chars = {}, -- Array of extra characters that will trigger signature completion, e.g., {"(", ","}
+  floating_window_off_y = -1,
   handler_opts = {
     border = "rounded"
   }
