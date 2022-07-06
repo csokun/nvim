@@ -13,6 +13,7 @@ null_ls.setup {
   sources = {
     diagnostics.eslint,
     code_actions.eslint,
+    formatting.beautysh,
     formatting.prettier.with {
       extra_filetypes = { "toml", "solidity" },
     }
