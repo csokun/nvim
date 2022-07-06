@@ -12,6 +12,7 @@ end
 -- the script will detect settings use it to setup the server
 local servers = {
   "tsserver",
+  "emmet_ls",
   "sumneko_lua",
   "elixirls",
   "bashls",
@@ -48,6 +49,10 @@ for _, lsp in ipairs(servers) do
         client.resolved_capabilities.document_range_formatting = false
       end
 
+      if (client.name == "emmet_ls") then
+        return
+      end
+
       on_attach(client, bufnr)
     end,
     flags = lsp_flags,
@@ -62,4 +67,3 @@ for _, lsp in ipairs(servers) do
 
   lspconfig[lsp].setup(options)
 end
---lspconfig.eslint.setup { capabilities = capabilities }
