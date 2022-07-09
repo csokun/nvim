@@ -12,6 +12,7 @@ configs.setup {
     "go",
     "heex",
     "eex",
+    "surface",
     "dockerfile",
     "make",
     "css",
