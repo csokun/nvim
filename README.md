@@ -13,10 +13,10 @@ fc-cache -f -v
 
 ```bash
 # install stylua
-cargo install stylua
+cargo install stylua && asdf reshim rust
 
 # install bash-language-server
-npm i -g bash-language-server
+npm i -g bash-language-server && asdf reshim nodejs
 
 # setup GitHub Copilot
 :Copilot setup
