@@ -45,8 +45,8 @@ for _, lsp in ipairs(servers) do
     on_attach = function(client, bufnr)
       -- disable formatting capabilities
       if (client.name == "tsserver" or client.name == "jsonls" or client.name == "eslint") then
-        client.resolved_capabilities.document_formatting = false
-        client.resolved_capabilities.document_range_formatting = false
+        client.server_capabilities.documentFormattingProvider = false;
+        client.server_capabilities.documentRangeFormattingProvider = false;
       end
 
       if (client.name == "emmet_ls") then
