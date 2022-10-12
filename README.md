@@ -25,7 +25,9 @@ npm i -g bash-language-server && asdf reshim nodejs
 sudo pacman -S clang
 
 # Python
-pip install --upgrade pyright autopep8
+pip install --upgrade pyright autopep8 && asdf reshim python
+
+pip install beautysh && asdf reshim python
 ```
 
 ## Debugger

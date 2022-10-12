@@ -15,7 +15,7 @@ null_ls.setup {
     code_actions.eslint,
     formatting.beautysh,
     formatting.prettier.with {
-      extra_filetypes = { "toml", "solidity" },
+      extra_filetypes = { "toml", "solidity" }
     }
   },
   -- on_attach = function(client, bufnr)

@@ -36,7 +36,7 @@ M.on_attach = function(client, bufnr)
   nmap { '<space>rn', vim.lsp.buf.rename, bufopts }
   nmap { '<space>ca', vim.lsp.buf.code_action, bufopts }
   --nmap { 'gr', vim.lsp.buf.references, bufopts }
-  nmap { '<space>f', vim.lsp.buf.formatting, bufopts }
+  nmap { '<space>f', function() vim.lsp.buf.format { async = false } end, bufopts }
 
   if illuminate_status_ok then
     illuminate.on_attach(client)
