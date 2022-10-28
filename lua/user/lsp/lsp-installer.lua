@@ -38,7 +38,7 @@ local lsp_flags = require("user.lsp.handlers").flags
 
 -- auto complete
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local options = {}
 for _, lsp in ipairs(servers) do
   options = {

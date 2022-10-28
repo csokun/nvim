@@ -106,7 +106,7 @@ return require("packer").startup(function(use)
   use "nvim-lualine/lualine.nvim"
   use { "akinsho/bufferline.nvim", tag = "v2.*" }
   use "lukas-reineke/indent-blankline.nvim"
-  use { "j-hui/fidget.nvim", after = "lualine.nvim", config = function() require("fidget").setup() end }
+  --use { "j-hui/fidget.nvim", after = "lualine.nvim", config = function() require("fidget").setup() end }
   use "RRethy/vim-illuminate"
   use { "akinsho/toggleterm.nvim", tag = "v2.*" }
 
