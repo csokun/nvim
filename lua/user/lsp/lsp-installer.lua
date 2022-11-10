@@ -18,6 +18,7 @@ local servers = {
   "bashls",
   "pyright",
   "gopls",
+  "rust_analyzer",
   "clangd",
   "solc",
   "jsonls",
