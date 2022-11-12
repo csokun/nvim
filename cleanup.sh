@@ -1,5 +1,5 @@
 #!/bin/bash
-rm -rf ~/.local/nvim
+rm -rf ~/.local/share/nvim
 rm -rf plugin
 
 
