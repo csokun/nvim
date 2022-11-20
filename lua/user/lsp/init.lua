@@ -1,5 +1,5 @@
 require "user.lsp.diagnostic"
-require "user.lsp.lsp-installer"
+require "user.lsp.mason"
 require "user.lsp.null-ls"
 require "user.lsp.lsp_signature"
 
