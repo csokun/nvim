@@ -1,5 +1,18 @@
 # Neovim Config
 
+## Keymaps
+
+| Key | Description |
+| --- | --- |
+| `CTRL+p` | Telescope find_files |
+| `CTRL+f` | Telescope live_grep | 
+| `CTRL+b` | Telescope buffers |
+| `SPC+ca` | Code action |
+| `SPC+rn` | Rename |
+| `ALT+g` | LazyGit |
+| `TAB` | Switch buffer (bufferline) |
+| `SHIFT+s` | Hop word |
+
 ## Fonts
 
 ```bash
