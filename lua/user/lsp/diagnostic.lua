@@ -19,7 +19,7 @@ end
 
 local config = {
   -- disable virtual text
-  virtual_text = false,
+  virtual_text = true,
   -- show signs
   signs = {
     active = signs,
@@ -37,8 +37,3 @@ local config = {
 }
 
 vim.diagnostic.config(config)
-
-vim.api.nvim_create_autocmd({ "CursorHold" }, {
-  pattern = "*",
-  callback = function() vim.diagnostic.open_float() end
-})
