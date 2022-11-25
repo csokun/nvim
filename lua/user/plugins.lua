@@ -105,7 +105,7 @@ return require("packer").startup(function(use)
   -- theme
   use "navarasu/onedark.nvim"
   use "nvim-lualine/lualine.nvim"
-  use { "akinsho/bufferline.nvim", tag = "v2.*" }
+  use { "akinsho/bufferline.nvim", tag = "v3.*" }
   use "lukas-reineke/indent-blankline.nvim"
   --use { "j-hui/fidget.nvim", after = "lualine.nvim", config = function() require("fidget").setup() end }
   use "RRethy/vim-illuminate"
