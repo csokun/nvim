@@ -17,6 +17,7 @@ nvim_tree.setup {
   },
   view = {
     adaptive_size = true,
+    hide_root_folder = false,
     mappings = {
       custom_only = false,
       list = {
