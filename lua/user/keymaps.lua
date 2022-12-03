@@ -44,16 +44,10 @@ map("n", "<C-\\>", "<cmd>vsplit<cr>")
 map("n", "<C-p>", "<cmd>Telescope find_files<cr>")
 map("n", "<C-f>", "<cmd>Telescope live_grep<cr>")
 map("n", "<C-b>", "<cmd>Telescope buffers<cr>")
-map("n", "gr", "<cmd>Telescope lsp_references<cr>")
-map("n", "<leader>s", "<cmd>Telescope lsp_document_symbols<cr>")
 
 -- nvim-tree
 map("n", "<C-n>", "<cmd>NvimTreeToggle<cr>")
 map("n", "<A-g>", "<cmd>LazyGit<cr>")
-
-map("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>')
-map("n", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>')
-map("v", "<leader>rn", '<cmd>lua require("renamer").rename()<cr>')
 
 -- maximize
 map("n", "<F3>", '<cmd>:MaximizerToggle<CR>')

@@ -53,8 +53,8 @@ return require("packer").startup(function(use)
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use "jose-elias-alvarez/null-ls.nvim"
-  use "ray-x/lsp_signature.nvim"
   use "b0o/schemastore.nvim"
+  use { "glepnir/lspsaga.nvim", branch = "main" }
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
@@ -85,7 +85,6 @@ return require("packer").startup(function(use)
   -- editing enhancement
   use { "numToStr/FTerm.nvim" }
   use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup() end, after = 'nvim-cmp' }
-  use { "filipdutescu/renamer.nvim", config = function() require("renamer").setup() end }
   use { "numToStr/Comment.nvim", config = function() require("Comment").setup() end }
   use { 'phaazon/hop.nvim', branch = 'v2' }
   use "towolf/vim-helm"
@@ -107,9 +106,7 @@ return require("packer").startup(function(use)
   use "nvim-lualine/lualine.nvim"
   use { "akinsho/bufferline.nvim", tag = "v3.*" }
   use "lukas-reineke/indent-blankline.nvim"
-  --use { "j-hui/fidget.nvim", after = "lualine.nvim", config = function() require("fidget").setup() end }
   use "RRethy/vim-illuminate"
-  --use { "akinsho/toggleterm.nvim", tag = "v2.*" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
