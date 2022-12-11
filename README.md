@@ -2,16 +2,16 @@
 
 ## Keymaps
 
-| Key | Description |
-| --- | --- |
-| `CTRL+p` | Telescope find_files |
-| `CTRL+f` | Telescope live_grep | 
-| `CTRL+b` | Telescope buffers |
-| `SPC+ca` | Code action |
-| `SPC+rn` | Rename |
-| `ALT+g` | LazyGit |
-| `TAB` | Switch buffer (bufferline) |
-| `SHIFT+s` | Hop word |
+| Key       | Description                |
+| --------- | -------------------------- |
+| `CTRL+p`  | Telescope find_files       |
+| `CTRL+f`  | Telescope live_grep        |
+| `CTRL+b`  | Telescope buffers          |
+| `SPC+ca`  | Code action                |
+| `SPC+rn`  | Rename                     |
+| `ALT+g`   | LazyGit                    |
+| `TAB`     | Switch buffer (bufferline) |
+| `SHIFT+s` | Hop word                   |
 
 ## Fonts
 
@@ -41,6 +41,12 @@ sudo pacman -S clang
 pip install --upgrade pyright autopep8 && asdf reshim python
 
 pip install beautysh && asdf reshim python
+```
+
+Eslint_d and Prettierd installation:
+
+```bash
+npm i -g eslint_d @fsouza/prettierd
 ```
 
 ## Debugger
