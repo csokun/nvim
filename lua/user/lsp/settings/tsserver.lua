@@ -5,6 +5,14 @@ return {
       disableSuggestions = false,
       includeCompletionsWithSnippetText = true,
       includeCompletionsForImportStatements = true,
+      includeInlayEnumMemberValueHints = true,
+      includeInlayFunctionLikeReturnTypeHints = true,
+      includeInlayFunctionParameterTypeHints = true,
+      includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all';
+      includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+      includeInlayPropertyDeclarationTypeHints = true,
+      includeInlayVariableTypeHints = true,
     },
   },
+
 }

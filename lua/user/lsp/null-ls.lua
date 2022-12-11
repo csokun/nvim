@@ -14,9 +14,8 @@ null_ls.setup {
     diagnostics.eslint_d,
     code_actions.eslint_d,
     formatting.beautysh,
-    formatting.prettier.with {
-      extra_filetypes = { "toml", "solidity" },
-      extra_args = { "--single-quote", "--jsx-single-quote" },
-    },
+    formatting.prettierd.with({
+      extra_filetypes = { "toml", "solidity" }
+    })
   },
 }

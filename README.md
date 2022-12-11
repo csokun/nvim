@@ -43,10 +43,32 @@ pip install --upgrade pyright autopep8 && asdf reshim python
 pip install beautysh && asdf reshim python
 ```
 
+## Javascript/Typescript formatting
+
 Eslint_d and Prettierd installation:
 
 ```bash
 npm i -g eslint_d @fsouza/prettierd
+```
+
+Create `.prettierrc.json` with the following config:
+
+```json
+{
+  "semi": true,
+  "singleQuote": true
+}
+```
+
+Add the following line to `.eslintrc`
+
+```json
+  ...
+  "rules": {
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"]
+  }
+  ...
 ```
 
 ## Debugger
