@@ -21,18 +21,13 @@ M.on_attach = function(client, bufnr)
   nmap { 'gD', vim.lsp.buf.declaration, bufopts }
   nmap { 'gd', vim.lsp.buf.definition, bufopts }
   nmap { 'gi', vim.lsp.buf.implementation, bufopts }
-  --nmap { '<C-k>', vim.lsp.buf.signature_help, bufopts }
+  nmap { 'gl', "<cmd>Telescope diagnostics<cr>", bufopts }
+  nmap { '<C-k>', vim.lsp.buf.signature_help, bufopts }
   nmap { '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts }
   nmap { '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts }
-  nmap {
-    '<space>wl',
-    function()
-      print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-    end,
-    bufopts
-  }
   nmap { '<space>D', vim.lsp.buf.type_definition, bufopts }
   nmap { '<space>f', function() vim.lsp.buf.format { async = false } end, bufopts }
+  nmap { '<leader>ca', function() vim.lsp.buf.code_action() end, bufopts }
 
   if illuminate_status_ok then
     illuminate.on_attach(client)

@@ -11,8 +11,6 @@ local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup {
   sources = {
-    diagnostics.eslint_d,
-    code_actions.eslint_d,
     formatting.beautysh,
     formatting.prettierd.with({
       extra_filetypes = { "toml", "solidity" }

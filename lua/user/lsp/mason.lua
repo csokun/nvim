@@ -73,10 +73,6 @@ for _, lsp in ipairs(servers) do
         client.server_capabilities.documentRangeFormattingProvider = false;
       end
 
-      if (client.name == "emmet_ls") then
-        return
-      end
-
       on_attach(client, bufnr)
     end,
     flags = lsp_flags,

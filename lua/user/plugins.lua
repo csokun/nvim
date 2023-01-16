@@ -54,7 +54,8 @@ return require("packer").startup(function(use)
   use "williamboman/mason-lspconfig.nvim"
   use "jose-elias-alvarez/null-ls.nvim"
   use "b0o/schemastore.nvim"
-  use { "glepnir/lspsaga.nvim", branch = "main" }
+  use "ray-x/lsp_signature.nvim"
+  --use { "glepnir/lspsaga.nvim", branch = "main" }
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
