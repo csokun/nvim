@@ -23,7 +23,8 @@ configs.setup {
     "python",
     "typescript",
     "markdown",
-    "javascript"
+    "javascript",
+    "vim"
   },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)

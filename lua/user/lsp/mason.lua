@@ -14,7 +14,7 @@ end
 local servers = {
   "tsserver",
   "emmet_ls",
-  "sumneko_lua",
+  "lua_ls",
   "eslint",
   "elixirls",
   "bashls",
