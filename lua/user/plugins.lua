@@ -75,6 +75,10 @@ return require("packer").startup(function(use)
   use "nvim-telescope/telescope-ui-select.nvim"
 
   use { "folke/trouble.nvim", config = function() require("trouble").setup() end }
+  use {
+    "someone-stole-my-name/yaml-companion.nvim",
+    config = function() require('telescope').load_extension("yaml_schema") end
+  }
 
   -- DAP
   use "mfussenegger/nvim-dap"
