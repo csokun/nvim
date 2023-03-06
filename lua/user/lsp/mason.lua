@@ -61,8 +61,8 @@ local on_attach = require("user.lsp.handlers").on_attach
 local lsp_flags = require("user.lsp.handlers").flags
 
 -- auto complete
---local capabilities = vim.lsp.protocol.make_client_capabilities()
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 local options = {}
 for _, lsp in ipairs(servers) do
   options = {
