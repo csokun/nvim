@@ -22,7 +22,6 @@ configs.setup {
     "solidity",
     "python",
     "typescript",
-    "markdown",
     "javascript",
     "vim"
   },
