@@ -38,7 +38,7 @@ packer.init {
 
 return require("packer").startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "nvim-lua/plenary.nvim"  -- Useful lua functions used ny lots of plugins
 
   -- explorer
   use "kyazdani42/nvim-web-devicons"
@@ -57,7 +57,7 @@ return require("packer").startup(function(use)
   use "ray-x/lsp_signature.nvim"
   --use { "glepnir/lspsaga.nvim", branch = "main" }
   -- Treesitter
-  use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+  use { "nvim-treesitter/nvim-treesitter", tag = 'v0.8.5.2', run = ":TSUpdate" }
 
   -- nvim-cmp
   use "hrsh7th/cmp-nvim-lsp"
@@ -79,6 +79,7 @@ return require("packer").startup(function(use)
     "someone-stole-my-name/yaml-companion.nvim",
     config = function() require('telescope').load_extension("yaml_schema") end
   }
+  use "towolf/vim-helm"
 
   -- DAP
   use "mfussenegger/nvim-dap"
@@ -92,7 +93,6 @@ return require("packer").startup(function(use)
   use { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup() end, after = 'nvim-cmp' }
   use { "numToStr/Comment.nvim", config = function() require("Comment").setup() end }
   use { 'phaazon/hop.nvim', branch = 'v2' }
-  use "towolf/vim-helm"
   use "kazhala/close-buffers.nvim"
   use "szw/vim-maximizer"
   use {
