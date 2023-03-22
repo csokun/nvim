@@ -8,6 +8,18 @@ if not config_status_ok then
   return
 end
 
+local function copy_file_to(node)
+  local file_src = node['absolute_path']
+  -- The args of input are {prompt}, {default}, {completion}
+  -- Read in the new file path using the existing file's path as the baseline.
+  local file_out = vim.fn.input("COPY TO: ", file_src, "file")
+  -- Create any parent dirs as required
+  local dir = vim.fn.fnamemodify(file_out, ":h")
+  vim.fn.system { 'mkdir', '-p', dir }
+  -- Copy the file
+  vim.fn.system { 'cp', '-R', file_src, file_out }
+end
+
 local tree_cb = nvim_tree_config.nvim_tree_callback
 -- default keymapping https://github.com/kyazdani42/nvim-tree.lua#defaults
 nvim_tree.setup {
@@ -21,49 +33,49 @@ nvim_tree.setup {
     mappings = {
       custom_only = false,
       list = {
-        { key = "v", cb = tree_cb "vsplit" },
+        { key = "v",                              cb = tree_cb "vsplit" },
         { key = { "<CR>", "o", "<2-LeftMouse>" }, action = "edit" },
-        { key = "<C-e>", action = "edit_in_place" },
-        { key = "O", action = "edit_no_picker" },
-        { key = { "<C-]>", "<2-RightMouse>" }, action = "cd" },
-        { key = "<C-v>", action = "vsplit" },
-        { key = "<C-x>", action = "split" },
-        { key = "<C-t>", action = "tabnew" },
-        { key = "<", action = "prev_sibling" },
-        { key = ">", action = "next_sibling" },
-        { key = "P", action = "parent_node" },
-        { key = "<BS>", action = "close_node" },
-        { key = "<Tab>", action = "preview" },
-        { key = "K", action = "first_sibling" },
-        { key = "J", action = "last_sibling" },
-        { key = "I", action = "toggle_git_ignored" },
-        { key = "H", action = "toggle_dotfiles" },
-        { key = "U", action = "toggle_custom" },
-        { key = "R", action = "refresh" },
-        { key = "a", action = "create" },
-        { key = "d", action = "remove" },
-        { key = "D", action = "trash" },
-        { key = "r", action = "rename" },
-        { key = "<C-r>", action = "full_rename" },
-        { key = "x", action = "cut" },
-        { key = "c", action = "copy" },
-        { key = "p", action = "paste" },
-        { key = "y", action = "copy_name" },
-        { key = "Y", action = "copy_path" },
-        { key = "gy", action = "copy_absolute_path" },
-        { key = "[c", action = "prev_git_item" },
-        { key = "]c", action = "next_git_item" },
-        { key = "-", action = "dir_up" },
-        { key = "s", action = "system_open" },
-        { key = "f", action = "live_filter" },
-        { key = "F", action = "clear_live_filter" },
-        { key = "q", action = "close" },
-        { key = "W", action = "collapse_all" },
-        { key = "E", action = "expand_all" },
-        { key = "S", action = "search_node" },
-        { key = ".", action = "run_file_command" },
-        { key = "<C-k>", action = "toggle_file_info" },
-        { key = "g?", action = "toggle_help" },
+        { key = "<C-e>",                          action = "edit_in_place" },
+        { key = "O",                              action = "edit_no_picker" },
+        { key = { "<C-]>", "<2-RightMouse>" },    action = "cd" },
+        { key = "<C-v>",                          action = "vsplit" },
+        { key = "<C-x>",                          action = "split" },
+        { key = "<C-t>",                          action = "tabnew" },
+        { key = "<",                              action = "prev_sibling" },
+        { key = ">",                              action = "next_sibling" },
+        { key = "P",                              action = "parent_node" },
+        { key = "<BS>",                           action = "close_node" },
+        { key = "<Tab>",                          action = "preview" },
+        { key = "K",                              action = "first_sibling" },
+        { key = "J",                              action = "last_sibling" },
+        { key = "I",                              action = "toggle_git_ignored" },
+        { key = "H",                              action = "toggle_dotfiles" },
+        { key = "U",                              action = "toggle_custom" },
+        { key = "R",                              action = "refresh" },
+        { key = "a",                              action = "create" },
+        { key = "d",                              action = "remove" },
+        { key = "D",                              action = "trash" },
+        { key = "r",                              action = "rename" },
+        { key = "<C-r>",                          action = "full_rename" },
+        { key = "x",                              action = "cut" },
+        { key = "c",                              action = "copy_file_to",      action_cb = copy_file_to },
+        { key = "p",                              action = "paste" },
+        { key = "y",                              action = "copy_name" },
+        { key = "Y",                              action = "copy_path" },
+        { key = "gy",                             action = "copy_absolute_path" },
+        { key = "[c",                             action = "prev_git_item" },
+        { key = "]c",                             action = "next_git_item" },
+        { key = "-",                              action = "dir_up" },
+        { key = "s",                              action = "system_open" },
+        { key = "f",                              action = "live_filter" },
+        { key = "F",                              action = "clear_live_filter" },
+        { key = "q",                              action = "close" },
+        { key = "W",                              action = "collapse_all" },
+        { key = "E",                              action = "expand_all" },
+        { key = "S",                              action = "search_node" },
+        { key = ".",                              action = "run_file_command" },
+        { key = "<C-k>",                          action = "toggle_file_info" },
+        { key = "g?",                             action = "toggle_help" },
       }
     }
   },
