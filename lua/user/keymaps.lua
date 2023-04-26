@@ -13,12 +13,14 @@ local map = function(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-vim.g.mapleader = ","
+-- leader=SPACE
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-map("n", "<C-h>", "<C-w>h")
-map("n", "<C-j>", "<C-w>j")
-map("n", "<C-k>", "<C-w>k")
-map("n", "<C-l>", "<C-w>l")
+map("n", "<leader>h", "<C-w>h")
+map("n", "<leader>j", "<C-w>j")
+map("n", "<leader>k", "<C-w>k")
+map("n", "<leader>l", "<C-w>l")
 
 -- Visual Block --
 map("n", "<esc><esc>", "<cmd>nohlsearch<cr>") -- double ESC to disable search highlight
@@ -41,13 +43,13 @@ map("n", "<C-\\>", "<cmd>vsplit<cr>")
 --map('n', '<C-q>', '<cmd>wq!<CR>')
 
 -- telescope
-map("n", "<C-p>", "<cmd>Telescope find_files<cr>")
-map("n", "<C-f>", "<cmd>Telescope live_grep<cr>")
-map("n", "<C-b>", "<cmd>Telescope buffers<cr>")
+map("n", "<leader>p", "<cmd>Telescope find_files<cr>")
+map("n", "<leader>f", "<cmd>Telescope live_grep<cr>")
+map("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 
 -- nvim-tree
-map("n", "<C-n>", "<cmd>NvimTreeToggle<cr>")
-map("n", "<A-g>", "<cmd>LazyGit<cr>")
+map("n", "<leader>n", "<cmd>NvimTreeToggle<cr>")
+map("n", "<leader>lg", "<cmd>LazyGit<cr>")
 
 -- maximize
 map("n", "<F3>", '<cmd>:MaximizerToggle<CR>')
