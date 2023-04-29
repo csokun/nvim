@@ -35,12 +35,10 @@ map("x", "K", ":move '<-2<CR>gv-gv")
 
 map("v", "p", "'_dP")
 
-map("n", "<C-\\>", "<cmd>vsplit<cr>")
+map("n", "|", "<cmd>vsplit<cr>")
+map("n", "_", "<cmd>split<cr>")
 
--- CTRL+W, S -> Horizontal split
--- CTRL+W, v -> Vertical split
--- CTRL+W, Q -> close buffer
---map('n', '<C-q>', '<cmd>wq!<CR>')
+map('n', "W", ":bd<CR>")
 
 -- telescope
 map("n", "<leader>p", "<cmd>Telescope find_files<cr>")
@@ -55,11 +53,3 @@ map("n", "<leader>lg", "<cmd>LazyGit<cr>")
 map("n", "<F3>", '<cmd>:MaximizerToggle<CR>')
 map("v", '<F3>', '<cmd>:MaximizerToggle<CR>gv')
 map("i", '<F3>', '<C-o>:MaximizerToggle<CR>')
-
--- trouble
-map("n", "<leader>xx", "<cmd>TroubleToggle<cr>")
-map("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>")
-map("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>")
-map("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>")
-map("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>")
-map("n", "gR", "<cmd>TroubleToggle lsp_references<cr>")
