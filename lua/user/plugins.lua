@@ -37,7 +37,7 @@ local options = {
   -- Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
-    version = 'v0.8.5.2',
+    version = 'v0.9.0',
     run = ":TSUpdate"
   },
 
