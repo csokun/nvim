@@ -42,8 +42,8 @@ map('n', "W", ":bd<CR>")
 
 -- telescope
 map("n", "<leader>p", "<cmd>Telescope find_files<cr>")
-map("n", "<leader>f", "<cmd>Telescope live_grep<cr>")
-map("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
+map("n", "<leader>g", "<cmd>Telescope live_grep<cr>")
+map("n", "<leader>f", "<cmd>Telescope buffers<cr>")
 
 -- nvim-tree
 map("n", "<leader>n", "<cmd>NvimTreeToggle<cr>")
