@@ -53,3 +53,6 @@ map("n", "<leader>lg", "<cmd>LazyGit<cr>")
 map("n", "<F3>", '<cmd>:MaximizerToggle<CR>')
 map("v", '<F3>', '<cmd>:MaximizerToggle<CR>gv')
 map("i", '<F3>', '<C-o>:MaximizerToggle<CR>')
+
+-- toggle relative line number
+map("n", "<leader>ln", ":set invrelativenumber<CR>")
