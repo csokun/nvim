@@ -41,11 +41,12 @@ map("n", "_", "<cmd>split<cr>")
 map('n', "W", ":bd<CR>")
 
 -- telescope
-map("n", "<leader>p", "<cmd>Telescope find_files<cr>")
-map("n", "<leader>g", "<cmd>Telescope live_grep<cr>")
-map("n", "<leader>f", "<cmd>Telescope buffers<cr>")
+map("n", "<leader>tp", "<cmd>Telescope find_files<cr>")
+map("n", "<leader>tg", "<cmd>Telescope live_grep<cr>")
+map("n", "<leader>tb", "<cmd>Telescope buffers<cr>")
 
 -- nvim-tree
+map("n", "<leader>tn", "<cmd>NvimTreeFocus<cr>")
 map("n", "<leader>n", "<cmd>NvimTreeToggle<cr>")
 map("n", "<leader>lg", "<cmd>LazyGit<cr>")
 
