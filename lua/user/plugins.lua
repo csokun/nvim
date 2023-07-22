@@ -88,7 +88,7 @@ local options = {
   },
 
   -- AI
-  -- ,"github/copilot.vim"
+  "github/copilot.vim",
 
   -- theme
   "navarasu/onedark.nvim",
