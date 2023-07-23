@@ -34,7 +34,6 @@ local options = {
   wrap = false,                            -- display lines as one long line
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
-  guifont = "monospace:h13",               -- the font used in graphical neovim applications
   autoindent = true,
 }
 vim.g.loaded_netrw = 1

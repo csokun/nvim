@@ -11,9 +11,13 @@ if indent_blankline_ok then
   vim.opt.list = true
   vim.opt.listchars:append "space:⋅"
   vim.opt.listchars:append "eol:↴"
+
+  vim.cmd [[highlight IndentBlanklineContextChar guifg=#E5C07B gui=nocombine ]]
+  vim.cmd [[highlight IndentBlanklineContextStart guisp=#E5C07B gui=underline ]]
+
   indent_blankline.setup {
     space_char_blankline = " ",
-    show_current_context_start = true,
+    show_current_context_start = false,
     show_current_context = true,
   }
 end
