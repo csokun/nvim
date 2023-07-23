@@ -12,8 +12,8 @@ if indent_blankline_ok then
   vim.opt.listchars:append "space:⋅"
   vim.opt.listchars:append "eol:↴"
 
-  vim.cmd [[highlight IndentBlanklineContextChar guifg=#E5C07B gui=nocombine ]]
-  vim.cmd [[highlight IndentBlanklineContextStart guisp=#E5C07B gui=underline ]]
+  vim.cmd [[hi IndentBlanklineContextChar guifg=#E5C07B gui=nocombine ]]
+  vim.cmd [[hi IndentBlanklineContextStart guisp=#E5C07B gui=underline ]]
 
   indent_blankline.setup {
     space_char_blankline = " ",
@@ -40,3 +40,4 @@ vim.cmd [[hi SignColumn guibg=none ctermbg=none]]
 vim.cmd [[hi EndOfBuffer guibg=none ctermbg=none]]
 vim.cmd [[hi NvimTreeNormal guibg=none ctermbg=none]]
 vim.cmd [[hi NvimTreeEndOfBuffer guibg=none ctermbg=none]]
+vim.cmd [[hi CopilotSuggestion guifg=#555555 ctermfg=8]]

@@ -69,8 +69,7 @@ for _, lsp in ipairs(servers) do
     on_attach = function(client, bufnr)
       -- disable formatting capabilities
       if (client.name == "tsserver" or client.name == "jsonls" or client.name == "eslint") then
-        client.server_capabilities.documentFormattingProvider = false;
-        client.server_capabilities.documentRangeFormattingProvider = false;
+        return
       end
 
       on_attach(client, bufnr)
