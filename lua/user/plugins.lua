@@ -37,6 +37,9 @@ local options = {
   -- Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter-textobjects',
+    },
     version = 'v0.9.0',
     run = ":TSUpdate"
   },
@@ -94,7 +97,7 @@ local options = {
   -- theme
   "navarasu/onedark.nvim",
   "nvim-lualine/lualine.nvim",
-  { "akinsho/bufferline.nvim", version = "v3.*" },
+  { "akinsho/bufferline.nvim", version = "v4.*" },
   "lukas-reineke/indent-blankline.nvim",
   "RRethy/vim-illuminate"
 }
