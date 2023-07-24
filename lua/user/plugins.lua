@@ -92,8 +92,15 @@ local options = {
   },
 
   -- AI
-  "github/copilot.vim",
-
+  --"github/copilot.vim",
+  { "zbirenbaum/copilot.lua",  event = "insertenter" },
+  {
+    "zbirenbaum/copilot-cmp",
+    config = function()
+      require("copilot_cmp").setup()
+    end
+  },
+  --
   -- theme
   "navarasu/onedark.nvim",
   "nvim-lualine/lualine.nvim",

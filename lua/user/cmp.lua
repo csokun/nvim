@@ -54,16 +54,16 @@ cmp.setup {
     format = require("lspkind").cmp_format({
       with_text = true,
       menu = {
-        nvim_lsp = "[LSP]",
         copilot = "[Copilot]",
+        nvim_lsp = "[LSP]",
         luasnip = "[LuaSnip]",
       }
     })
   },
   sources = cmp.config.sources({
+    { name = 'copilot' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' },
-    { name = 'copilot' },
     { name = 'path' },
     { name = 'buffer',  max_item_count = 3, keyword_length = 4 }
   }, {
