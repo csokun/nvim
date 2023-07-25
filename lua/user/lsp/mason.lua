@@ -64,37 +64,21 @@ local lsp_flags = require("user.lsp.handlers").flags
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-mason_lspconfig.setup_handlers {
+local options = {}
+for _, lsp in ipairs(servers) do
+  -- auto detect settings
+  local exists, extended = pcall(require, "user.lsp.settings." .. lsp)
+  if exists then
+    options[lsp] = extended
+  end
+end
+
+mason_lspconfig.setup_handlers({
   function(server_name)
     lspconfig[server_name].setup {
       capabilities = capabilities,
       on_attach = on_attach,
-      settings = servers[server_name]
+      settings = options[server_name]
     }
-  end
-}
-
-
--- local options = {}
--- for _, lsp in ipairs(servers) do
---   options = {
---     on_attach = function(client, bufnr)
---       -- disable formatting capabilities
---       if (client.name == "tsserver" or client.name == "jsonls") then
---         return
---       end
---
---       on_attach(client, bufnr)
---     end,
---     flags = lsp_flags,
---     capabilities = capabilities,
---   }
---
---   -- auto detect settings
---   local exists, extended = pcall(require, "user.lsp.settings." .. lsp)
---   if exists then
---     options = vim.tbl_deep_extend("force", extended, options)
---   end
---
---   lspconfig[lsp].setup(options)
--- end
+  end,
+})
