@@ -1,8 +1,6 @@
 return {
-  settings = {
-    elixirLS = {
-      dialyzerEnabled = false,
-      fetchDeps = false,
-    }
+  elixirLS = {
+    dialyzerEnabled = false,
+    fetchDeps = false,
   }
 }
