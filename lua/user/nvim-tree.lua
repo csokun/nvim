@@ -3,11 +3,6 @@ if not status_ok then
   return
 end
 
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-  return
-end
-
 local function copy_file_to(node)
   local file_src = node['absolute_path']
   -- The args of input are {prompt}, {default}, {completion}
@@ -26,7 +21,6 @@ local function on_attach(bufnr)
   local function opts(desc)
     return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
-
 
   -- Default mappings. Feel free to modify or remove as you wish.
   --
@@ -85,7 +79,6 @@ local function on_attach(bufnr)
   vim.keymap.set('n', '<2-RightMouse>', api.tree.change_root_to_node, opts('CD'))
   -- END_DEFAULT_ON_ATTACH
 
-
   -- Mappings removed via:
   --   remove_keymaps
   --   OR
@@ -118,7 +111,6 @@ local function on_attach(bufnr)
   vim.keymap.set('n', 'Z', api.node.run.system, opts('Run System'))
 end
 
-local tree_cb = nvim_tree_config.nvim_tree_callback
 -- default keymapping https://github.com/kyazdani42/nvim-tree.lua#defaults
 nvim_tree.setup {
   filters = {
