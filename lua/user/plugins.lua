@@ -40,7 +40,7 @@ local options = {
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
-    version = 'v0.9.0',
+    version = 'v0.9*',
     run = ":TSUpdate"
   },
 
@@ -105,7 +105,7 @@ local options = {
   "navarasu/onedark.nvim",
   "nvim-lualine/lualine.nvim",
   { "akinsho/bufferline.nvim",             version = "v4.*" },
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl",         version = "v3.3.*", opts = {} },
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl",    version = "v3.3.*", opts = {} },
   "RRethy/vim-illuminate"
 }
 

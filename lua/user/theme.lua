@@ -38,7 +38,12 @@ if ibl_ok then
   vim.g.rainbow_delimiters = { highlight = highlight }
 
   ibl.setup {
-    scope = { highlight = highlight },
+    whitespace = { highlight = { "Whitespace", "NonText" } },
+    scope = {
+      highlight = highlight,
+      show_start = false,
+      show_end = false
+    },
     -- space_char_blankline = " ",
     -- show_current_context_start = false,
     -- show_current_context = true,
