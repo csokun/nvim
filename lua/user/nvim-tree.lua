@@ -120,7 +120,6 @@ nvim_tree.setup {
   on_attach = on_attach,
   view = {
     adaptive_size = true,
-    hide_root_folder = false,
   },
   renderer = {
     icons = {

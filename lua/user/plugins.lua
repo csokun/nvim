@@ -93,7 +93,7 @@ local options = {
 
   -- AI
   --"github/copilot.vim",
-  { "zbirenbaum/copilot.lua",  event = "insertenter" },
+  { "zbirenbaum/copilot.lua",              event = "insertenter" },
   {
     "zbirenbaum/copilot-cmp",
     config = function()
@@ -104,8 +104,8 @@ local options = {
   -- theme
   "navarasu/onedark.nvim",
   "nvim-lualine/lualine.nvim",
-  { "akinsho/bufferline.nvim", version = "v4.*" },
-  "lukas-reineke/indent-blankline.nvim",
+  { "akinsho/bufferline.nvim",             version = "v4.*" },
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl",         version = "v3.3.*", opts = {} },
   "RRethy/vim-illuminate"
 }
 
