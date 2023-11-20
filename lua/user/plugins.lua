@@ -31,6 +31,7 @@ local options = {
   "neovim/nvim-lspconfig", -- enable LSP
   "williamboman/mason.nvim",
   "williamboman/mason-lspconfig.nvim",
+  "simrat39/rust-tools.nvim",
   "jose-elias-alvarez/null-ls.nvim",
   "b0o/schemastore.nvim",
   "ray-x/lsp_signature.nvim",
@@ -105,7 +106,7 @@ local options = {
   "navarasu/onedark.nvim",
   "nvim-lualine/lualine.nvim",
   { "akinsho/bufferline.nvim",             version = "v4.*" },
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl",    version = "v3.3.*", opts = {} },
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl",         version = "v3.3.*", opts = {} },
   "RRethy/vim-illuminate"
 }
 

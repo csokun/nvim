@@ -16,6 +16,7 @@ configs.setup {
     "dockerfile",
     "make",
     "css",
+    "rust",
     "toml",
     "yaml",
     "tsx",

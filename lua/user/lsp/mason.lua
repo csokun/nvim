@@ -20,11 +20,11 @@ local servers = {
   "bashls",
   "html",
   "tailwindcss",
-  -- "rust_analyzer",
-  -- "clangd",
-  -- "pyright",
-  -- "gopls",
-  -- "solc",
+  "rust_analyzer",
+  "clangd",
+  "pyright",
+  "gopls",
+  "solc",
   "jsonls",
   "yamlls",
   "dockerls"
@@ -75,6 +75,11 @@ end
 
 mason_lspconfig.setup_handlers({
   function(server_name)
+    if (server_name == "rust_analyzer") then
+      -- ignore
+      return
+    end
+
     lspconfig[server_name].setup {
       capabilities = capabilities,
       on_attach = on_attach,
