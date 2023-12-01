@@ -45,6 +45,7 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
+vim.cmd [[ set background=dark ]]
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]       -- treat dash separated words as a word text object
 vim.cmd [[set formatoptions-=cro]] -- Stop newline continution of comments

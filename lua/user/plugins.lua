@@ -104,6 +104,11 @@ local options = {
   --
   -- theme
   "navarasu/onedark.nvim",
+  {
+    'AlexvZyl/nordic.nvim',
+    lazy = false,
+    priority = 1000,
+  },
   "nvim-lualine/lualine.nvim",
   { "akinsho/bufferline.nvim",             version = "v4.*" },
   { "lukas-reineke/indent-blankline.nvim", main = "ibl",         version = "v3.3.*", opts = {} },

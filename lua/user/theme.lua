@@ -1,14 +1,19 @@
 -- colortheme
-local onedark_status_ok, onedark = pcall(require, "onedark")
-if onedark_status_ok then
-  onedark.setup({ style = "darker" })
-  onedark.load()
+-- local onedark_status_ok, onedark = pcall(require, "onedark")
+-- if onedark_status_ok then
+--   onedark.setup({ style = "darker" })
+--   onedark.load()
+-- end
+local nordic_status_ok, nordic = pcall(require, "nordic")
+if nordic_status_ok then
+  vim.cmd [[ colorscheme nordic ]]
+  nordic.load()
 end
-
+--
 -- indent-blankline
 local ibl_ok, ibl = pcall(require, "ibl")
 if ibl_ok then
-  vim.opt.list = true
+  --vim.opt.list = true
   vim.opt.listchars:append "space:⋅"
   vim.opt.listchars:append "eol:↴"
 
@@ -55,7 +60,7 @@ end
 local lualine_ok, lualine = pcall(require, "lualine")
 if lualine_ok then
   lualine.setup({
-    theme = "onedark"
+    theme = "nordic"
   })
 end
 
