@@ -35,6 +35,14 @@ local options = {
   "jose-elias-alvarez/null-ls.nvim",
   "b0o/schemastore.nvim",
   "ray-x/lsp_signature.nvim",
+  {
+    'saecki/crates.nvim',
+    tag = 'stable',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('crates').setup()
+    end,
+  },
   -- Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
