@@ -1,15 +1,40 @@
 -- colortheme
--- local onedark_status_ok, onedark = pcall(require, "onedark")
--- if onedark_status_ok then
---   onedark.setup({ style = "darker" })
---   onedark.load()
--- end
-local nordic_status_ok, nordic = pcall(require, "nordic")
-if nordic_status_ok then
-  vim.cmd [[ colorscheme nordic ]]
-  nordic.load()
+local theme = "nordic"
+
+if theme == "onedark" then
+  local onedark_status_ok, onedark = pcall(require, "onedark")
+  if onedark_status_ok then
+    onedark.setup({ style = "darker" })
+    onedark.load()
+  end
 end
---
+
+if theme == "nordic" then
+  local nordic_status_ok, nordic = pcall(require, "nordic")
+  if nordic_status_ok then
+    nordic.load()
+    vim.cmd [[ colorscheme nordic ]]
+  end
+
+  vim.cmd [[hi Visual term=reverse cterm=reverse guibg=#2d3d4a]]
+end
+
+if theme == "solarized-osaka" then
+  local osaka_ok, osaka = pcall(require, "solarized-osaka")
+  if osaka_ok then
+    osaka.load()
+    vim.cmd [[ colorscheme solarized-osaka ]]
+  end
+end
+
+-- lualine
+local lualine_ok, lualine = pcall(require, "lualine")
+if lualine_ok then
+  lualine.setup({
+    theme = theme,
+  })
+end
+
 -- indent-blankline
 local ibl_ok, ibl = pcall(require, "ibl")
 if ibl_ok then
@@ -56,22 +81,14 @@ if ibl_ok then
   hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
 end
 
--- lualine
-local lualine_ok, lualine = pcall(require, "lualine")
-if lualine_ok then
-  lualine.setup({
-    theme = "nordic"
-  })
-end
-
-vim.cmd [[hi Normal guibg=none ctermbg=none]]
-vim.cmd [[hi LineNr guibg=none ctermbg=none]]
-vim.cmd [[hi Folded guibg=none ctermbg=none]]
-vim.cmd [[hi NonText guibg=none ctermbg=none]]
-vim.cmd [[hi SpecialKey guibg=none ctermbg=none]]
-vim.cmd [[hi VertSplit guibg=none ctermbg=none]]
-vim.cmd [[hi SignColumn guibg=none ctermbg=none]]
-vim.cmd [[hi EndOfBuffer guibg=none ctermbg=none]]
-vim.cmd [[hi NvimTreeNormal guibg=none ctermbg=none]]
-vim.cmd [[hi NvimTreeEndOfBuffer guibg=none ctermbg=none]]
-vim.cmd [[hi CopilotSuggestion guifg=#555555 ctermfg=8]]
+-- vim.cmd [[hi Normal guibg=none ctermbg=none]]
+-- vim.cmd [[hi LineNr guibg=none ctermbg=none]]
+-- vim.cmd [[hi Folded guibg=none ctermbg=none]]
+-- vim.cmd [[hi NonText guibg=none ctermbg=none]]
+-- vim.cmd [[hi SpecialKey guibg=none ctermbg=none]]
+-- vim.cmd [[hi VertSplit guibg=none ctermbg=none]]
+-- vim.cmd [[hi SignColumn guibg=none ctermbg=none]]
+-- vim.cmd [[hi EndOfBuffer guibg=none ctermbg=none]]
+-- vim.cmd [[hi NvimTreeNormal guibg=none ctermbg=none]]
+-- vim.cmd [[hi NvimTreeEndOfBuffer guibg=none ctermbg=none]]
+-- vim.cmd [[hi CopilotSuggestion guifg=#555555 ctermfg=8]]
