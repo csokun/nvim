@@ -13,7 +13,7 @@ end
 -- the script will detect settings use it to setup the server
 local servers = {
   "tsserver",
-  "emmet_ls",
+  "emmet-language-server",
   "lua_ls",
   "eslint",
   "elixirls",
@@ -27,6 +27,7 @@ local servers = {
   "solc",
   "jsonls",
   "yamlls",
+  "docker_compose_language_service",
   "dockerls"
 }
 

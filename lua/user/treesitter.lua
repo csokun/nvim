@@ -17,6 +17,7 @@ configs.setup {
     "make",
     "css",
     "rust",
+    "bash",
     "toml",
     "yaml",
     "tsx",
