@@ -13,7 +13,7 @@ end
 -- the script will detect settings use it to setup the server
 local servers = {
   "tsserver",
-  "emmet-language-server",
+  "emmet_language_server",
   "lua_ls",
   "eslint",
   "elixirls",
