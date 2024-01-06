@@ -13,8 +13,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local options = {
-  "wbthomason/packer.nvim", -- Have packer manage itself
-  "nvim-lua/plenary.nvim",  -- Useful lua functions used ny lots of plugins
+  "nvim-lua/plenary.nvim", -- Useful lua functions used ny lots of plugins
 
   -- explorer
   "kyazdani42/nvim-web-devicons",
