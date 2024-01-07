@@ -51,6 +51,7 @@ local options = {
     version = 'v0.9*',
     run = ":TSUpdate"
   },
+  'nvim-treesitter/playground',
 
   -- nvim-cmp
   "hrsh7th/cmp-nvim-lsp",
