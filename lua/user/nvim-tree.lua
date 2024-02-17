@@ -113,6 +113,10 @@ end
 
 -- default keymapping https://github.com/kyazdani42/nvim-tree.lua#defaults
 nvim_tree.setup {
+  git = {
+    enable = true,
+    timeout = 400
+  },
   filters = {
     custom = { "^\\.git$" },
     exclude = { ".gitignore" }
