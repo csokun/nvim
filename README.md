@@ -16,7 +16,7 @@
 ## Fonts
 
 ```bash
-wget -qO FiraCode.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/FiraCode.zip
+wget -qO FiraCode.zip https://github.com/tonsky/FiraCode/releases/download/6.2/Fira_Code_v6.2.zip
 mkdir -p ~/.fonts/FiraCode
 unzip FiraCode.zip -d ~/.fonts/FiraCode/
 fc-cache -f -v
