@@ -131,7 +131,7 @@ local options = {
     opts = {},
   },
   "nvim-lualine/lualine.nvim",
-  { "akinsho/bufferline.nvim",             version = "v4.*" },
+  { "akinsho/bufferline.nvim" },
   { "lukas-reineke/indent-blankline.nvim", main = "ibl",    version = "v3.5.*", opts = {} },
   "RRethy/vim-illuminate"
 }

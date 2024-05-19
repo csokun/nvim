@@ -1,5 +1,5 @@
 -- colortheme
-local theme = "nordic"
+local theme = "onedark"
 
 if theme == "onedark" then
   local onedark_status_ok, onedark = pcall(require, "onedark")
